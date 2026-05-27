@@ -1,0 +1,386 @@
+@import url(footer.css);
+
+
+:root{
+    --black : #1E1E1E;
+    --white : #F3F3F3;
+
+    --hero-bold : 600;;
+    --reg : 500;
+    --light : 300;
+
+    /* Responsive Font Size */
+    --fsz-sub-head : 32px;
+
+    --fsz-sec-title: 48px;
+
+    --fsz-text-m : 20px;
+    --fsz-text-s: 16px;
+
+    --fsz-cta-head: 56px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+
+
+
+#nav-bar{
+    padding: 0 120px;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(45deg, #077F9E, #24A1C0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+    margin-right: 60px;
+}
+
+.nav-text{
+    font-size: 14px;
+    font-weight: var(--light);
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.nav-symbol{
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.back-menu{
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    padding: 10px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.back-menu img{
+    width: 20px;
+    height: 20px;
+}
+
+.back-menu:hover{
+    background-color: #ffffff2e;
+}
+
+
+
+
+
+.sec-title{
+    color: var(--black);
+    font-size: var(--fsz-sec-title);
+    font-weight: var(--reg);
+    margin: 45px 0;
+}
+
+.btn-4{
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--reg);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-4:hover{
+    opacity: 0.8;
+}
+
+
+
+#main{
+    width: 100%;
+    padding: 0 120px;
+}
+
+.info-container{
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.info-img{
+    background-size: cover;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.info-text-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info-title{
+    color: var(--black);
+    font-size: var(--fsz-sub-head);
+    font-weight: var(--reg);
+    margin-bottom: 20px;
+}
+
+.info-text{
+    color: var(--black);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    text-align: justify;
+    line-height: 180%;
+}
+
+.service-container-1 .info-img{
+    background-image: url(../assets/img/marketing-management.jpg);    
+    background-position: top right;
+}
+
+.service-container-2 .info-img{
+    background-image: url(../assets/img/hospitality-management.webp);
+    background-position: top center;
+}
+
+.service-container-3 .info-img{
+    background-image: url(../assets/img/property-service-hero.avif);
+    background-position: center;
+}
+
+.service-container-2{
+    flex-direction: row-reverse;
+}
+
+.service-container-2 .info-text-wrap{
+    align-items: end;
+}
+
+
+
+
+#cta{
+    width: 100%;
+    padding: 60px 120px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.cta-bg-img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/about-hero-2.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+    z-index: -999;
+}
+
+.cta-bg-overlay{
+    position: absolute;
+    left: 0;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    z-index: -998;
+    opacity: 0.95;
+}
+
+.cta-headline{
+    color: var(--white);
+    font-size: var(--fsz-cta-head);
+    font-weight: var(--reg);
+}
+
+.cta-text-wrap{
+    width: 100%;
+}
+
+.cta-text{
+    color: var(--white);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    line-height: 180%;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.cta-headline span{
+    white-space: nowrap;
+}
+
+
+@media only screen and (max-width:1024px){
+    :root{
+        --fsz-sub-head : 28px;
+
+        --fsz-text-m : 18px;
+        --fsz-text-s: 14px;
+
+        --fsz-cta-head: 48px;
+    }
+
+
+    #nav-bar, #main{
+        padding: 0 60px;
+    }
+    #cta{
+        padding: 60px 60px;
+        gap: 90px;
+    }
+
+    .info-text-wrap{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width:850px){
+    :root{
+        --fsz-sec-title: 40px;
+
+        --fsz-cta-head: 40px;
+    }
+
+
+    .nav-text, .nav-symbol{
+        display: none;
+    }
+
+
+    .sec-title{
+        margin: 30px 0;
+    }
+
+
+    .info-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .info-img{
+        width: 100%;
+        height: 300px;
+        background-position: 0 0;
+    }
+    .info-text-wrap{
+        width: 100%;
+    }
+    .service-container-2 .info-text-wrap{
+        align-items: start;
+    }
+
+
+    #cta{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    .cta-text{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width:585px){
+    :root{
+        --fsz-sub-head : 24px;
+
+        --fsz-sec-title: 36px;
+
+        --fsz-text-m : 16px;
+        --fsz-text-s: 13px;
+    }
+
+
+    #nav-bar, #main{
+        padding: 0 30px;
+    }
+    #cta{
+        padding: 45px 30px;
+        gap: 20px;
+    }
+
+
+    .btn-4{
+        width: 135px;
+        height: 45px;
+    }
+
+
+    .cta-text{
+        margin-bottom: 30px;
+    }
+
+}
+
+
+@media only screen and (max-width:425px){
+    #nav-bar, #main{
+        padding: 0 20px;
+    }
+    #cta{
+        padding: 30px 20px;
+    }
+
+
+    .info-img{
+        height: 200px;
+    }
+}
+
+
+/* KETIKA LAYAR SANGAT KECIL, MAKA GUNAKAN OVERFLOW HIDDEN, SUPAYA TIDAK MUNCUL SCROLLBAR*/
+/* SENGAJA DIPISAHKAN DENGAN RESPONSIVE TERAKHIR, AGAR TETAP JELAS */
+
+@media only screen and (max-width:350px){
+    #nav-bar, #main, #cta{
+        overflow: hidden;
+    }
+    #cta{
+        align-items: start;
+    }
+    
+
+    .info-container{
+        width: 310px;
+    }
+
+
+    .sec-title{
+        width: 310px;
+    }
+
+
+    .cta-headline, .cta-text{
+        width: 310px;
+    }
+}

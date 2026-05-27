@@ -1,0 +1,879 @@
+@import url(footer.css);
+
+
+:root{
+    --black : #1E1E1E;
+    --white : #F3F3F3;
+
+    --hero-bold : 600;;
+    --reg : 500;
+    --light : 300;
+
+    /* Responsive Font Size */
+    --fsz-head : 96px;
+    --fsz-sub-head : 32px;
+
+    --fsz-sec-title: 48px;
+
+    --fsz-text-m : 20px;
+    --fsz-text-s: 16px;
+
+    --fsz-cta-head: 56px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+
+
+#nav-bar{
+    position: absolute;
+    padding: 0 120px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-bar .logo{
+    width: 200px;
+}
+
+#menu, #cross{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.nav-link{
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: var(--light);
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    letter-spacing: 0.3px;
+    position: relative;
+    opacity: 0.8;
+}
+
+.nav-link::before{
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: var(--white);
+    position: absolute;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.nav-link:hover::before{
+    width: 100%;
+}
+
+.nav-active{
+    opacity: 1;
+    font-weight: var(--reg);
+}
+
+
+
+
+
+#main{
+    width: 100%;
+    height: 100%;
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bg-img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/hero-image.avif);
+    background-size: cover;
+    background-position: top right;
+    transform: scaleX(-1);
+    z-index: -999;
+}
+
+.bg-overlay{
+    position: absolute;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.05));
+    width: 100%;
+    height: 100%;
+    z-index: -998;
+}
+
+.sub-text{
+    color: var(--white);
+    font-size: var(--fsz-sub-head);
+    font-weight: var(--light);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+.main-text{
+    width: 700px;
+    color: var(--white);
+    font-size: var(--fsz-head);
+    font-weight: var(--hero-bold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    line-height: 100%;
+    margin-bottom: 60px;
+}
+
+
+
+
+
+/* ############################# */
+
+.sec-title{
+    color: var(--black);
+    font-size: var(--fsz-sec-title);
+    font-weight: var(--reg);
+    margin: 45px 0;
+}
+
+.btn-1{
+    color: var(--white);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--light);
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.btn-2{
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--reg);
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid var(--white);
+    transition: 0.3s;
+}
+
+.btn-3{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--light);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-4{
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--reg);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-1:hover, .btn-2:hover, .btn-4:hover{
+    opacity: 0.8;
+}
+
+.btn-3:hover{
+    opacity: 0.9;
+}
+
+/* ############################# */
+
+
+
+
+#service{
+    width: 100%;
+    padding: 0 120px;
+    margin-bottom: 90px;
+}
+
+.service-container{
+    width: 100%;
+    display: flex;
+    gap: 60px;
+}
+
+.service-img{
+    max-width: 500px;
+    width: 100%;
+    background-image: url(../assets/img/service-hero.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.service-content-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-text{
+    color: var(--black);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    text-align: justify;
+}
+
+.service-point-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-point-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.service-point-img{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+
+.service-point{
+    color: var(--black);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--reg);
+    line-height: 150%;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+#about{
+    width: 100%;
+    padding: 0 120px;
+    position: relative;
+    color: var(--white);
+}
+
+.about-bg-img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/about-hero-2.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+    z-index: -999;
+}
+
+.about-bg-overlay{
+    position: absolute;
+    left: 0;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    z-index: -998;
+    opacity: 0.95;
+}
+
+.about-text-wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+#about .sec-title{
+    color: var(--white);
+}
+
+.about-text{
+    width: 100%;
+    max-width: 900px;
+    color: var(--white);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    text-align: justify;
+    margin-bottom: 60px;
+}
+
+.stats-container{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.stats-num{
+    color: var(--white);
+    font-size: 72px;
+    font-weight: var(--reg);
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-text{
+    text-align: center;
+    color: var(--white);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+}
+
+.divider{
+    height: 100px;
+    width: 4px;
+    background-color: var(--white);
+    border-radius: 2px;
+}
+
+#about .btn-4{
+    margin-bottom: 60px;
+}
+
+
+
+
+
+#villa{
+    width: 100%;
+    padding: 0 120px;
+    margin-bottom: 60px;
+}
+
+.villa-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.villa-wrap{
+    width: 25%;
+}
+
+.villa-img{
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.villa-img-1{
+    background-image: url(../assets/img/villa-1.jpg);
+}
+.villa-img-2{
+    background-image: url(../assets/img/villa-2.webp);
+}
+.villa-img-3{
+    background-image: url(../assets/img/villa-3.avif);
+}
+.villa-img-4{
+    background-image: url(../assets/img/villa-4.jpg);
+}
+
+
+.villa-title{
+    font-size: 20px;
+    color: var(--black);
+    font-weight: var(--reg);
+    line-height: 120%;
+}
+
+.villa-loc{
+    font-size: 14px;
+    color: var(--black);
+    font-weight: var(--reg);
+    opacity: 0.5;
+}
+
+.villa-btn-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+
+
+
+
+#review{
+    width: 100%;
+    padding: 0 120px;
+    margin-bottom: 90px;
+}
+
+.rev-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.rev-item{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.35);
+}
+
+.rev-item-top{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rev-item-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rev-img{    
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.rev-name{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: var(--reg);
+    line-height: 100%;
+    margin-bottom: 5px;
+}
+
+.rev-villa{
+    color: var(--black);
+    font-size: 12px;
+    font-weight: var(--reg);
+    line-height: 120%;
+    opacity: 0.5;
+}
+
+.rev-text{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: var(--light);
+    line-height: 170%;
+    text-align: justify;
+}
+
+.rev-date{
+    color: var(--black);
+    font-size: 12px;
+    font-weight: var(--reg);
+    line-height: 100%;
+    opacity: 0.5;
+    text-align: right;
+    margin-top: 20px;
+}
+
+
+.rev-img-1{
+    background-image: url(../assets/img/review-1.jpg);
+    background-position: center;
+}
+
+.rev-img-2{
+    background-image: url(../assets/img/review-2.jpg);
+    background-position: center;
+}
+
+.rev-img-3{
+    background-image: url(../assets/img/review-3.jpg);
+    background-position: center;
+}
+
+
+
+
+#cta{
+    width: 100%;
+    padding: 0 120px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.cta-headline{
+    color: var(--black);
+    font-size: var(--fsz-cta-head);
+    font-weight: var(--reg);
+}
+
+.cta-text-wrap{
+    width: 100%;
+    max-width: 600px;
+}
+
+.cta-text{
+    color: var(--black);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    line-height: 200%;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:1024px){
+    :root{
+        --fsz-sub-head : 28px;
+
+        --fsz-text-m : 18px;
+        --fsz-text-s: 14px;
+
+        --fsz-cta-head: 48px;
+    }
+
+
+    #nav-bar, #main, #service, #about, #villa, #review, #cta{
+        padding: 0 60px;
+    }
+    #cta{
+        gap: 90px;
+    }
+
+
+    .about-text{
+        margin-bottom: 30px;
+    }
+    .stats-container{
+        margin-bottom: 30px;
+    }
+    .stats-num{
+        font-size: 64px;
+    }
+    .divider{
+        height: 90px;
+    }
+
+
+    .rev-name{
+        font-size: 14px;
+    }
+    .rev-villa{
+        font-size: 11px;
+    }
+    .rev-text{
+        font-size: 14px;
+    }
+    .rev-date{
+        font-size: 11px;
+    }
+}
+
+
+@media only screen and (max-width:850px){
+    :root{
+        --fsz-head : 80px;
+
+        --fsz-sec-title: 40px;
+
+        --fsz-cta-head: 40px;
+    }
+
+
+    #menu{
+        display: block;
+    }
+    .nav-link{
+        display: none;
+    }
+
+
+    .sub-text{
+        width: 80vw;
+        max-width: 600px;
+    }
+    .main-text{
+        width: 75vw;
+        max-width: 500px;
+        line-height: 120%;
+    }
+
+
+    .sec-title{
+        margin: 30px 0;
+    }
+
+
+    #service{
+        margin-bottom: 60px;
+    }
+    .service-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .service-img{
+        max-width: 100%;
+        height: 300px;
+    }
+
+
+    .about-text{
+        margin-bottom: 45px;
+    }
+    .stats-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .stats-wrap{
+        width: 50%;
+        margin-bottom: 45px;
+    }
+    .divider{
+        display: none;
+    }
+
+
+    .villa-container{
+        flex-wrap: wrap;
+    }
+    .villa-wrap{
+        width: 47%;
+    }
+
+
+    .rev-container{
+        flex-direction: column;
+    }
+    .rev-name{
+        font-size: 16px;
+    }
+    .rev-villa{
+        font-size: 12px;
+    }
+    .rev-text{
+        font-size: 16px;
+    }
+    .rev-date{
+        font-size: 12px;
+    }
+
+
+    #cta{
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+    .cta-headline{
+        max-width: 500px;
+    }
+    .cta-text-wrap{
+        max-width: 100%;
+    }
+    .cta-text{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (max-width:585px){
+    :root{
+        --fsz-sub-head : 24px;
+
+        --fsz-sec-title: 36px;
+
+        --fsz-text-m : 16px;
+        --fsz-text-s: 13px;
+    }
+
+
+    #nav-bar, #main, #service, #about, #villa, #review, #cta{
+        padding: 0 30px;
+    }
+
+
+    #menu, #cross{
+        right: 30px;
+    }
+
+
+    .main-text{
+        margin-top: 60px;
+    }
+    .sub-text{
+        display: none;
+    }    
+
+
+    .btn-3, .btn-4{
+        width: 135px;
+        height: 45px;
+    }
+
+
+    .stats-num{
+        font-size: 48px;
+    }
+
+
+    .villa-container{
+        gap: 0;
+    }
+    .villa-wrap{
+        width: 48%;
+    }
+    .villa-img{
+        height: 150px;
+    }
+    .villa-title{
+        font-size: 16px;
+    }
+    .villa-loc{
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width:425px){
+    :root{
+        --fsz-head : 64px;
+    }
+
+
+    #nav-bar, #main, #service, #about, #villa, #review, #cta{
+        padding: 0 20px;
+    }
+
+
+    #menu, #cross{
+        right: 20px;
+    }
+
+
+    .service-point{
+        white-space: initial;
+    }
+
+
+    .stats-wrap{
+        width: 100%;
+    }
+    .stats-num{
+        justify-content: start;
+    }
+    .stats-text{
+        text-align: left;
+    }
+}
+
+
+
+
+/* KETIKA LAYAR SANGAT KECIL, MAKA GUNAKAN OVERFLOW HIDDEN, SUPAYA TIDAK MUNCUL SCROLLBAR*/
+/* SENGAJA DIPISAHKAN DENGAN RESPONSIVE TERAKHIR, AGAR TETAP JELAS */
+
+@media only screen and (max-width:350px){
+    #nav-bar, #main, #service, #villa, #about, #review, #cta{
+        overflow: hidden;
+    }
+
+
+    #menu, #cross{
+        left: 305px;
+    }
+
+
+    .btn-wrap{
+        width: 310px;
+    }
+
+
+    .sec-title{
+        width: 310px;
+    }
+
+
+    .service-container{
+        width: 310px;
+    }
+
+
+    .about-text-wrap{
+        width: 310px;
+    }
+
+
+    .villa-container{
+        width: 310px;
+    }
+    .villa-wrap{
+        width: 149px;
+    }
+    .villa-btn-wrap{
+        width: 310px;
+    }
+
+
+    .rev-item{
+        width: 310px;
+    }
+
+
+    .cta-headline, .cta-text{
+        width: 310px;
+    }
+}
