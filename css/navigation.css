@@ -1,0 +1,116 @@
+#nav-bar{
+    background-image: linear-gradient(45deg, #077F9E, #24A1C0);
+    padding: 23px 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+#nav-bar .logo{
+    width: 200px;
+}
+
+.nav-link{
+    width: fit-content;
+    margin-left: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: var(--light);
+    font-size: 14px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    letter-spacing: 0.3px;
+    position: relative;
+    opacity: 0.8;
+}
+
+.nav-link::before{
+    content: "";
+    width: 0;
+    height: 1.5px;
+    background-color: var(--white);
+    position: absolute;
+    bottom: -3px;
+    transition: 0.3s;
+}
+
+.nav-link:hover::before{
+    width: 100%;
+}
+
+.nav-active{
+    opacity: 1;
+    font-weight: var(--reg);
+}
+
+
+#menu{
+    display: none;
+}
+
+
+.nav-dropdown{
+    display: none;
+}
+
+
+
+@media only screen and (max-width:1024px){    
+    #nav-bar{
+        padding: 23px 60px;
+    }
+}
+
+
+@media only screen and (max-width:850px){
+    #menu{
+        width: 25px;
+        position: absolute;
+        right: 60px;
+        top: 37px;
+        display: block;
+        cursor: pointer;
+    }
+    .nav{
+        display: none;
+    }
+
+    #nav-bar{
+        flex-wrap: wrap;
+    }
+
+    .nav-dropdown{
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    .nav-link{
+        margin: 0;
+    }
+}
+
+
+@media only screen and (max-width:585px){    
+    #nav-bar{
+        padding: 23px 30px;
+    }
+    #nav-bar .logo{
+        width: 150px;
+    }
+    #menu{
+        width: 20px;
+        right: 30px;
+        top: 33px;
+    }
+}
+
+
+@media only screen and (max-width:425px){    
+    #nav-bar{
+        padding: 23px 20px;
+    }
+}

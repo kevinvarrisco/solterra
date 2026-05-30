@@ -1,0 +1,27 @@
+@import url(navigation.css);
+
+:root{
+    --black : #1E1E1E;
+    --white : #F3F3F3;
+
+    --hero-bold : 600;;
+    --reg : 500;
+    --light : 300;
+
+    /* Responsive Font Size */
+    --fsz-sub-head : 32px;
+
+    --fsz-sec-title: 48px;
+
+    --fsz-text-m : 20px;
+    --fsz-text-s: 16px;
+
+    --fsz-cta-head: 56px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}

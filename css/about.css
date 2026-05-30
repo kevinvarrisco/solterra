@@ -1,0 +1,432 @@
+@import url(navigation.css);
+@import url(footer.css);
+
+
+:root{
+    --black : #1E1E1E;
+    --white : #F3F3F3;
+
+    --reg : 500;
+    --light : 300;
+
+    /* Responsive Font Size */
+    --fsz-sub-head : 32px;
+
+    --fsz-sec-title: 48px;
+
+    --fsz-text-m : 20px;
+    --fsz-text-s: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+
+
+.sec-title{
+    color: var(--black);
+    font-size: var(--fsz-sec-title);
+    font-weight: var(--reg);
+    margin: 45px 0;
+}
+
+.btn-3{
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--light);
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-3:hover{
+    opacity: 0.9;
+}
+
+
+
+#main{
+    width: 100%;
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container{
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    margin-bottom: 60px;
+}
+
+.info-img{
+    background-size: cover;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+.info-text{
+    width: 100%;
+    color: var(--black);
+    font-size: var(--fsz-text-m);
+    font-weight: var(--light);
+    text-align: justify;
+    line-height: 180%;
+}
+
+.about-1 .info-img{
+    background-image: url(../assets/img/office-1.png);    
+    background-position: top right;
+}
+
+.about-2 .info-img{
+    background-image: url(../assets/img/about-hero.webp);    
+    background-position: center;
+}
+
+.about-2{
+    flex-direction: row-reverse;
+    margin-bottom: 90px;
+}
+
+
+.stats-container{
+    align-self: center;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.stats-num{
+    color: var(--black);
+    font-size: 48px;
+    font-weight: var(--reg);
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-text{
+    text-align: center;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: var(--light);
+}
+
+.divider{
+    height: 90px;
+    width: 4px;
+    background-color: var(--black);
+    border-radius: 2px;
+}
+
+
+
+#executive{
+    width: 100%;
+    padding: 0px 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#executive .sec-title{
+    color: var(--white);
+}
+
+.dark-bg-img{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/img/about-hero-2.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+    z-index: -999;
+}
+
+.dark-bg-overlay{
+    position: absolute;
+    left: 0;
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    z-index: -998;
+    opacity: 0.95;
+}
+
+.team-container{
+    align-self: center;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.team-carousel{
+    width: 300%;
+    display: flex;
+    position: relative;
+    gap: 60px;
+}
+
+.team-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.team-img{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.team-name{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--reg);
+    line-height: 100%;
+}
+
+.team-position{
+    color: var(--white);
+    font-size: var(--fsz-text-s);
+    font-weight: var(--reg);
+    line-height: 100%;
+    opacity: 0.5;
+}
+
+.team-1 .team-img{
+    background-image: url(../assets/img/director-1.jpg);
+    background-position: center;
+}
+.team-2 .team-img{
+    background-image: url(../assets/img/director-2.avif);
+    background-position: 70% center;
+}
+.team-3 .team-img{
+    background-image: url(../assets/img/director-3.avif);    
+    background-position: 70% center;
+}
+
+
+
+#csr{
+    width: 100%;
+    padding: 0px 120px;
+    position: relative;
+}
+
+#csr .info-container{
+    margin-bottom: 90px;
+}
+
+#csr .info-img{
+    background-image: url(../assets/img/community-hero.webp);    
+    background-position: left;
+}
+
+.info-text-wrap{
+    width: 100%;
+}
+
+.info-title{
+    color: var(--black);
+    font-size: var(--fsz-sub-head);
+    font-weight: var(--reg);
+    margin-bottom: 20px;
+}
+
+#csr .info-text{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+@media only screen and (max-width:1024px){
+    :root{
+        --fsz-sub-head : 28px;
+
+        --fsz-text-m : 18px;
+        --fsz-text-s: 14px;
+    }
+
+
+    #main, #executive, #csr{
+        padding: 0 60px;
+    }
+    .info-container{
+        gap: 40px;
+    }
+
+
+    .team-carousel{
+        gap: 30px;
+    }
+
+
+    #csr .info-container{
+        gap: 60px;
+    }
+}
+
+
+@media only screen and (max-width:850px){
+    :root{
+        --fsz-sec-title: 40px;
+
+        --fsz-cta-head: 40px;
+    }
+
+
+    .info-container{
+        flex-direction: column;
+    }
+    .info-img{
+        max-width: 100%;
+        height: 350px;
+    }
+    .about-2{
+        margin-bottom: 60px;
+    }
+
+
+    .stats-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 90px;
+        gap: 40px;
+    }
+    .stats-wrap{
+        width: calc(50% - 20px);
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);;
+        padding: 60px 0;
+        border-radius: 20px;
+    }
+    .divider{
+        display: none;
+    }
+
+
+    .team-carousel{
+        flex-direction: column;
+    }
+
+
+    #csr .info-container{
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+
+@media only screen and (max-width:585px){
+    :root{
+        --fsz-sub-head : 24px;
+
+        --fsz-sec-title: 36px;
+
+        --fsz-text-m : 16px;
+        --fsz-text-s: 13px;
+    }
+
+
+    #main, #executive, #csr{
+        padding: 0 30px;
+    }
+
+
+    .stats-container{
+        gap: 30px;
+    }
+    .stats-wrap{
+        width: calc(50% - 15px);
+    }
+    .stats-num{
+        font-size: 36px;
+    }
+    .stats-text{
+        font-size: 16px;
+    }
+
+    .btn-3{
+        width: 135px;
+        height: 45px;
+    }
+}
+
+
+
+@media only screen and (max-width:425px){
+    #main, #executive, #csr{
+        padding: 0 20px;
+    }
+
+
+    .info-img{
+        height: 250px;
+    }
+    
+
+    .stats-container{
+        gap: 20px;
+    }
+    .stats-wrap{
+        width: calc(50% - 10px);
+    }
+}
+
+
+
+/* KETIKA LAYAR SANGAT KECIL, MAKA GUNAKAN OVERFLOW HIDDEN, SUPAYA TIDAK MUNCUL SCROLLBAR*/
+/* SENGAJA DIPISAHKAN DENGAN RESPONSIVE TERAKHIR, AGAR TETAP JELAS */
+
+@media only screen and (max-width:350px){
+    #nav-bar, #main, #executive, #csr{
+        overflow: hidden;
+    }
+    
+
+    .info-container{
+        width: 310px;
+    }
+
+
+    .sec-title{
+        width: 310px;
+    }
+
+    .stats-container{
+        width: 310px;
+        align-self: start;
+    }
+
+    .team-container{
+        width: 310px;
+        align-self: start;
+    }
+}

@@ -1,3 +1,4 @@
+@import url(navigation.css);
 @import url(footer.css);
 
 
@@ -5,7 +6,6 @@
     --black : #1E1E1E;
     --white : #F3F3F3;
 
-    --hero-bold : 600;;
     --reg : 500;
     --light : 300;
 
@@ -26,63 +26,6 @@
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-
-
-
-
-
-#nav-bar{
-    padding: 0 120px;
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(45deg, #077F9E, #24A1C0);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.left{
-    display: flex;
-    align-items: center;
-}
-
-.logo{
-    width: 200px;
-    margin-right: 60px;
-}
-
-.nav-text{
-    font-size: 14px;
-    font-weight: var(--light);
-    color: var(--white);
-    opacity: 0.8;
-}
-
-.nav-symbol{
-    width: 12px;
-    height: 12px;
-    opacity: 0.8;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-
-.back-menu{
-    border: 2px solid var(--white);
-    border-radius: 50%;
-    padding: 10px;
-    opacity: 0.8;
-    transition: 0.3s;
-}
-
-.back-menu img{
-    width: 20px;
-    height: 20px;
-}
-
-.back-menu:hover{
-    background-color: #ffffff2e;
-}
-
 
 
 
@@ -180,6 +123,10 @@
     align-items: end;
 }
 
+.service-container-3{
+    margin-bottom: 90px;
+}
+
 
 
 
@@ -223,6 +170,7 @@
 
 .cta-text-wrap{
     width: 100%;
+    margin-bottom: 15px;
 }
 
 .cta-text{
@@ -250,7 +198,7 @@
     }
 
 
-    #nav-bar, #main{
+    #main{
         padding: 0 60px;
     }
     #cta{
@@ -258,6 +206,9 @@
         gap: 90px;
     }
 
+    .info-container{
+        gap: 60px;
+    }
     .info-text-wrap{
         margin: 0;
     }
@@ -269,11 +220,6 @@
         --fsz-sec-title: 40px;
 
         --fsz-cta-head: 40px;
-    }
-
-
-    .nav-text, .nav-symbol{
-        display: none;
     }
 
 
@@ -321,7 +267,7 @@
     }
 
 
-    #nav-bar, #main{
+    #main{
         padding: 0 30px;
     }
     #cta{
@@ -344,7 +290,7 @@
 
 
 @media only screen and (max-width:425px){
-    #nav-bar, #main{
+    #main{
         padding: 0 20px;
     }
     #cta{
